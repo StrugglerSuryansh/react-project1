@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+ --red: #d01c28;
+ --gray: #2e2e2e;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: "Poppins", sans-serif;
+}
+
+button {
+ all: unset;
+ padding: 6px 16px;
+ background: var(--red);
+ height: 32px;
+ color: white;
+ font-weight: 500;
+ cursor: pointer;
+}
+
+.container {
+ margin: 0 auto;
+ max-width: 1280px;
+ padding: 0 16px; /* Added padding for smaller screens */
+}
+
+nav {
+ display: flex;
+ justify-content: space-between;
+ height: 72px;
+ align-items: center;
+}
+
+nav ul {
+ display: flex;
+ list-style: none;
+ gap: 24px;
+}
+
+nav ul a {
+ color: black;
+ text-decoration: none;
+}
+
+.hero {
+ display: flex;
+ align-items: center;
+ height: calc(100vh - 72px);
+ padding: 16px;
+ flex-direction: column; /* Changed to column on smaller screens */
+ text-align: center;
+}
+
+.hero-content {
+ display: flex;
+ flex-direction: column;
+ gap: 24px;
+}
+
+.hero h1 {
+ font-weight: 800;
+ line-height: 1.2;
+ font-size: 48px; /* Adjusted for smaller screens */
+}
+
+.hero p {
+ font-weight: 600;
+ color: var(--gray);
+ max-width: 100%; /* Allow text to fill more space on smaller screens */
+}
+
+.hero-btn {
+ display: flex;
+ gap: 16px;
+ flex-direction: column; /* Stack buttons on smaller screens */
+ align-items: center;
+}
+
+.hero-btn button {
+ font-size: 18px; /* Reduced size for smaller screens */
+}
+
+.secondary-btn {
+ background: transparent;
+ color: var(--gray);
+ border: 1px solid gray;
+}
+
+.shopping p {
+ font-size: 14px;
+ margin-bottom: 8px;
+}
+
+.brand-icons {
+ display: flex;
+ gap: 16px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (min-width: 768px) {
+ .hero {
+  flex-direction: row;
+  text-align: left;
+ }
+
+ .hero-content {
+  gap: 36px;
+ }
+
+ .hero h1 {
+  font-size: 64px;
+ }
+
+ .hero-btn {
+  flex-direction: row;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+ .hero h1 {
+  font-size: 108px;
+  line-height: 102px;
+ }
+
+ .hero p {
+  max-width: 400px;
+ }
+
+ .hero-btn button {
+  font-size: 24px;
+ }
+
+ .container {
+  padding: 0;
+ }
+}
